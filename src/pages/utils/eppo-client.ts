@@ -20,6 +20,7 @@ const eppoClientPromise = (() => {
   }
   return init({
     apiKey: process.env.EPPO_SDK_KEY,
+    baseUrl: process.env.EPPO_BASE_URL_OVERRIDE || undefined,
     assignmentLogger: {
       logAssignment(assignment) {
         console.log('EppoClient.assignmentLogger => logAssignment()', assignment);
