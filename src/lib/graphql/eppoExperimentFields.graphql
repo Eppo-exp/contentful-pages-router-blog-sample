@@ -1,0 +1,25 @@
+fragment EppoExperimentFields on EppoVariationContainer {
+  __typename
+  sys {
+    id
+    spaceId
+  }
+  entryName
+  flagKey
+  treatmentVariationsCollection {
+    items {
+      sys {
+        id
+      }
+      ...RichImageFields
+      ...PageBlogPostFields
+    }
+  }
+  controlVariation {
+    sys {
+      id
+    }
+    ...RichImageFields
+    ...PageBlogPostFields
+  }
+}
